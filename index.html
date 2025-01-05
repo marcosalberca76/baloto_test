@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resultados Baloto</title>
+    <style>
+      /* Estilos generales */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+
+      /* Navegación */
+      .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffffff;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar a {
+        text-decoration: none;
+        color: #333;
+        margin: 0 10px;
+      }
+
+      .navbar .nav-links {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .navbar .cta-buttons a {
+        padding: 8px 15px;
+        border-radius: 5px;
+        color: #fff;
+      }
+
+      .navbar .cta-buttons .play {
+        background-color: #ffd700;
+        margin-right: auto;
+        color: #007bff;
+        font-size: larger;
+      }
+
+      .navbar .coljuegos img {
+        height: 40px;
+      }
+
+      /* Contenido principal */
+      .main-content {
+        background-color: #004aad;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .main-content h1 {
+        margin-bottom: 10px;
+      }
+
+      .contenedor-resultados {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      .resultados {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .bola {
+        background-color: #ffc400;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-weight: bold;
+        color: #000;
+        text-decoration: underline;
+        animation: jump 0.5s infinite;
+      }
+
+      .bola-roja {
+        background-color: #c32b2b;
+        color: #fff;
+      }
+
+      .cta {
+        margin-top: 20px;
+        animation: jump 1s infinite;
+      }
+
+      .cta a {
+        display: inline-block;
+        background-color: #ffb700;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        border-radius: 5px;
+      }
+
+      .imagen_izquierda img,
+      .imagen_derecha img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        animation: fade-in 2s;
+      }
+
+      .footer {
+        background: #4195d5;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .footer img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* Animaciones */
+      @keyframes jump {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      @keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      /* Estilos responsivos */
+      @media (max-width: 768px) {
+        .contenedor-resultados {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .navbar {
+          padding: 10px;
+        }
+
+        .navbar .nav-links {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .bola {
+          width: 40px;
+          height: 40px;
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .navbar .cta-buttons .play {
+          font-size: medium;
+          padding: 5px 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navegación -->
+    <div class="navbar">
+      <div class="logo">
+        <img src="./assets/baloto.png" alt="Logo Baloto" height="50" />
+      </div>
+      <div class="nav-links">
+        <a href="#">¿Qué es?</a>
+        <a href="#">¿Cómo jugar?</a>
+        <a href="#">Resultados</a>
+        <a href="#">¿Dónde comprar?</a>
+      </div>
+      <div class="cta-buttons">
+        <a href="#" class="play">Regístrate</a>
+      </div>
+      <div class="coljuegos">
+        <img src="./assets/coljuegos.png" alt="Coljuegos" />
+      </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="main-content">
+      <h1>Resultado sorteo #2458</h1>
+      <p>Sábado 04 de Enero de 2025</p>
+      <div class="contenedor-resultados">
+        <div class="imagen_izquierda">
+          <img src="./assets/imagen_izquierda.jpeg" alt="Imagen izquierda" />
+        </div>
+        <div class="resultados">
+          <div class="bola">10</div>
+          <div class="bola">13</div>
+          <div class="bola">18</div>
+          <div class="bola">27</div>
+          <div class="bola">36</div>
+          <div class="bola bola-roja">09</div>
+        </div>
+        <div class="imagen_derecha">
+          <img src="./assets/imagen_derecha.jpeg" alt="Imagen derecha" />
+        </div>
+      </div>
+      <div class="cta">
+        <a href="#">¡Felicidades al ganador!</a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <img src="./assets/2651920.webp" alt="Imagen baja" />
+    </footer>
+  </body>
+</html>
